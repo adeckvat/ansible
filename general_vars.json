@@ -1,0 +1,32 @@
+{
+    "ansible_ssh_common_args": "-o StrictHostKeyChecking=no",
+    "blackbox_icmp": {
+        "tags": [
+            "prod",
+            "icmp"
+        ]
+    },
+    "consul_client_applications": [
+        "agent",
+        "blackbox_icmp",
+        "node_exporter"
+    ],
+    "consul_client_join_servers": [
+        "nnp",
+        "nnp",
+        "nnp"
+    ],
+    "consul_client_version": "test",
+    "consul_dc": "test",
+    "fluentbit_host": "opensearch-dashboards.",
+    "meta": {
+        "group": "RE",
+    },
+    "node_exporter": {
+        "port": 9100,
+        "tags": [
+            "prod",
+            "exporter"
+        ]
+    }
+}
